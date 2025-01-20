@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
@@ -17,15 +17,15 @@ body {
 
 /* Updated Color Scheme */
 :root {
-    --color1: #000000; /* Changed from #8a8d8f (grey) to #000000 (black) for header */
-    --color2: #ae8257; /* Remains unchanged */
-    --color3: #8a8d8f; /* Changed from #9f7590 (purple) to #8a8d8f (grey) for donation section */
-    --btn-hover: #555;
+    --color1: #000000; /* Black for header and footer */
+    --color2: #ae8257; /* Accent color */
+    --color3: #000000; /* Changed from #8a8d8f (grey) to #000000 (black) for donation section */
+    --btn-hover: #555; /* Hover color for buttons */
 }
 
 /* Header Styles */
 header {
-    background-color: var(--color1); /* Now black */
+    background-color: var(--color1); /* Black */
     color: #fff; /* White text */
     padding: 20px 0;
     text-align: center;
@@ -93,8 +93,8 @@ nav ul li a:hover {
 .donation-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: var(--color3); /* Changed to grey */
-    color: #fff;
+    background-color: var(--color3); /* Now black */
+    color: #fff; /* White text for contrast */
 }
 
 .donation-section h2 {
@@ -165,7 +165,7 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: var(--color1); /* Now black */
+    background-color: var(--color1); /* Black */
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -189,5 +189,14 @@ footer {
     .donation-buttons .btn {
         width: 80%;
         margin: 10px auto;
+    }
+
+    /* Ensure backgrounds remain consistent on mobile */
+    header, footer {
+        background-color: var(--color1); /* Black */
+    }
+
+    .donation-section {
+        background-color: var(--color3); /* Black */
     }
 }
