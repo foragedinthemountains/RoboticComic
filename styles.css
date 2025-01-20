@@ -15,18 +15,18 @@ body {
     line-height: 1.6;
 }
 
-/* Color Scheme */
+/* Updated Color Scheme */
 :root {
-    --color1: #8a8d8f; /* HEX: #8a8d8f */
-    --color2: #ae8257; /* HEX: #ae8257 */
-    --color3: #9f7590; /* HEX: #9f7590 */
+    --color1: #000000; /* Changed from #8a8d8f (grey) to #000000 (black) for header */
+    --color2: #ae8257; /* Remains unchanged */
+    --color3: #8a8d8f; /* Changed from #9f7590 (purple) to #8a8d8f (grey) for donation section */
     --btn-hover: #555;
 }
 
 /* Header Styles */
 header {
-    background-color: var(--color1);
-    color: #fff;
+    background-color: var(--color1); /* Now black */
+    color: #fff; /* White text */
     padding: 20px 0;
     text-align: center;
 }
@@ -93,7 +93,7 @@ nav ul li a:hover {
 .donation-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: var(--color3);
+    background-color: var(--color3); /* Changed to grey */
     color: #fff;
 }
 
@@ -124,6 +124,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
+/* Donation Buttons Colors */
 .paypal { background-color: #003087; }
 .paypal:hover { background-color: var(--btn-hover); }
 
@@ -164,7 +165,7 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: var(--color1);
+    background-color: var(--color1); /* Now black */
     color: #fff;
     text-align: center;
     padding: 15px 0;
