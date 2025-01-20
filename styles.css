@@ -15,17 +15,18 @@ body {
     line-height: 1.6;
 }
 
-/* Updated Color Scheme */
+/* CSS Variables for Color Scheme */
 :root {
-    --color1: #000000; /* Black for header and footer */
-    --color2: #ae8257; /* Accent color */
-    --color3: #000000; /* Changed from #8a8d8f (grey) to #000000 (black) for donation section */
-    --btn-hover: #555; /* Hover color for buttons */
+    --color-header-footer: #000000; /* Black for header and footer */
+    --color-accent: #ae8257;        /* Gold-like accent color */
+    --color-donation: #000000;      /* Black for donation section */
+    --color-video-bg: #8a8d8f;      /* Grey for video section background */
+    --color-hover: #555555;         /* Hover color for buttons */
 }
 
 /* Header Styles */
 header {
-    background-color: var(--color1); /* Black */
+    background-color: var(--color-header-footer); /* Black */
     color: #fff; /* White text */
     padding: 20px 0;
     text-align: center;
@@ -56,25 +57,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--color2);
+    color: var(--color-accent);
 }
 
 /* Video Section */
 .video-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--color-video-bg); /* Grey background */
 }
 
 .video-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: var(--color2);
+    color: #000000; /* Changed from gold to black */
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     max-width: 800px;
@@ -93,7 +94,7 @@ nav ul li a:hover {
 .donation-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: var(--color3); /* Now black */
+    background-color: var(--color-donation); /* Black background */
     color: #fff; /* White text for contrast */
 }
 
@@ -126,28 +127,28 @@ nav ul li a:hover {
 
 /* Donation Buttons Colors */
 .paypal { background-color: #003087; }
-.paypal:hover { background-color: var(--btn-hover); }
+.paypal:hover { background-color: var(--color-hover); }
 
 .cashapp { background-color: #25D366; }
-.cashapp:hover { background-color: var(--btn-hover); }
+.cashapp:hover { background-color: var(--color-hover); }
 
 .venmo { background-color: #3d95ce; }
-.venmo:hover { background-color: var(--btn-hover); }
+.venmo:hover { background-color: var(--color-hover); }
 
 .patreon { background-color: #FF424D; }
-.patreon:hover { background-color: var(--btn-hover); }
+.patreon:hover { background-color: var(--color-hover); }
 
 /* Cameo Section */
 .cameo-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: #fff; /* White background */
 }
 
 .cameo-section h2 {
     font-size: 2em;
     margin-bottom: 10px;
-    color: var(--color2);
+    color: var(--color-accent); /* Gold-like accent color */
 }
 
 .cameo-section p {
@@ -156,16 +157,16 @@ nav ul li a:hover {
 }
 
 .cameo-section .btn {
-    background-color: var(--color2);
+    background-color: var(--color-accent); /* Gold-like color */
 }
 
 .cameo-section .btn:hover {
-    background-color: var(--btn-hover);
+    background-color: var(--color-hover);
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--color1); /* Black */
+    background-color: var(--color-header-footer); /* Black */
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -193,10 +194,14 @@ footer {
 
     /* Ensure backgrounds remain consistent on mobile */
     header, footer {
-        background-color: var(--color1); /* Black */
+        background-color: var(--color-header-footer); /* Black */
     }
 
     .donation-section {
-        background-color: var(--color3); /* Black */
+        background-color: var(--color-donation); /* Black */
+    }
+
+    .video-section h2 {
+        color: #000000; /* Ensure heading is black on mobile */
     }
 }
