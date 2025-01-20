@@ -126,6 +126,9 @@ nav ul li a:hover {
 }
 
 /* Donation Buttons Colors */
+.patreon { background-color: #FF424D; }
+.patreon:hover { background-color: var(--color-hover); }
+
 .paypal { background-color: #003087; }
 .paypal:hover { background-color: var(--color-hover); }
 
@@ -135,8 +138,6 @@ nav ul li a:hover {
 .venmo { background-color: #3d95ce; }
 .venmo:hover { background-color: var(--color-hover); }
 
-.patreon { background-color: #FF424D; }
-.patreon:hover { background-color: var(--color-hover); }
 
 /* Cameo Section */
 .cameo-section {
