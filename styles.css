@@ -20,7 +20,7 @@ body {
     --color-header-footer: #000000; /* Black for header and footer */
     --color-accent: #ae8257;        /* Gold-like accent color */
     --color-donation: #000000;      /* Black for donation section */
-    --color-video-bg: #8a8d8f;      /* Grey for video section background */
+    --color-video-bg: #ffffff;      /* White for video section background */
     --color-hover: #555555;         /* Hover color for buttons */
 }
 
@@ -64,7 +64,7 @@ nav ul li a:hover {
 .video-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: var(--color-video-bg); /* Grey background */
+    background-color: var(--color-video-bg); 
 }
 
 .video-section h2 {
