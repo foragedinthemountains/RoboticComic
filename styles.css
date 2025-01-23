@@ -73,16 +73,40 @@ nav ul li a:hover {
     color: #000000; /* Changed from gold to black */
 }
 
+/* New Wrapper for Image and Video */
+.video-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between image and video */
+    max-width: 1000px; /* Optional: limit the maximum width */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Profile Photo Styles */
+.profile-photo {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: add some styling */
+}
+
+/* Adjust Video Container to take available space */
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto;
 }
 
-.video-container iframe {
+.video-wrapper .video-container {
+    flex: 1; /* Allow the video to grow and fill space */
+}
+
+.video-wrapper .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -204,5 +228,18 @@ footer {
 
     .video-section h2 {
         color: #000000; /* Ensure heading is black on mobile */
+    }
+
+    /* Stack image above video on mobile */
+    .video-wrapper {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        max-width: 100%; /* Make sure the image takes full width on mobile */
+    }
+
+    .video-container {
+        max-width: 100%;
     }
 }
