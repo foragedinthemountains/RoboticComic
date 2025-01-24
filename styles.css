@@ -106,12 +106,22 @@ nav ul li a:hover {
     flex: 1; /* Allow the video to grow and fill space */
 }
 
+/* Ensure iframe fills the container */
 .video-wrapper .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Set order for desktop: video first, image second */
+.video-container {
+    order: 1;
+}
+
+.profile-photo {
+    order: 2;
 }
 
 /* Donation Section */
@@ -208,41 +218,4 @@ footer {
         margin: 10px 0;
     }
 
-    .donation-buttons {
-        flex-direction: column;
-    }
-
-    .donation-buttons .btn {
-        width: 80%;
-        margin: 10px auto;
-    }
-
-    /* Ensure backgrounds remain consistent on mobile */
-    header, footer {
-        background-color: var(--color-header-footer); /* Black */
-    }
-
-    .donation-section {
-        background-color: var(--color-donation); /* Black */
-    }
-
-    .video-section h2 {
-        color: #000000; /* Ensure heading is black on mobile */
-    }
-
-    /* Stack video above image on mobile */
-    .video-wrapper {
-        flex-direction: column;
-    }
-
-    /* Reorder elements: video first, then image */
-    .video-container {
-        order: 1; /* Video appears first */
-        max-width: 100%;
-    }
-
-    .profile-photo {
-        order: 2; /* Image appears second */
-        max-width: 100%; /* Make sure the image takes full width on mobile */
-    }
-}
+    .don
