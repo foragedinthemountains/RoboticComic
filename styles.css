@@ -230,16 +230,19 @@ footer {
         color: #000000; /* Ensure heading is black on mobile */
     }
 
-    /* Stack image above video on mobile */
+    /* Stack video above image on mobile */
     .video-wrapper {
         flex-direction: column;
     }
 
-    .profile-photo {
-        max-width: 100%; /* Make sure the image takes full width on mobile */
+    /* Reorder elements: video first, then image */
+    .video-container {
+        order: 1; /* Video appears first */
+        max-width: 100%;
     }
 
-    .video-container {
-        max-width: 100%;
+    .profile-photo {
+        order: 2; /* Image appears second */
+        max-width: 100%; /* Make sure the image takes full width on mobile */
     }
 }
