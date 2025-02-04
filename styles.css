@@ -1,221 +1,244 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yesteryear&display=swap');
+/* Example of small critical CSS inline in <head> if needed.
+   For demonstration, all is in one file, but you'd typically inline critical rules
+   and load the rest asynchronously. */
 
-/* Global Styles */
+/* Google Fonts Import (Loading asynchronously via HTML <link> tag) */
+
+/* Global Resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* CSS Variables for Color Scheme */
-:root {
+  }
+  
+  /* Variables for Theming */
+  :root {
     --color-header-footer: #000000; /* Black for header and footer */
     --color-accent: #ae8257;        /* Gold-like accent color */
-    --color-donation: #000000;      /* Black for donation section */
+    --color-donation: #000000;      /* Black for donation section background */
     --color-video-bg: #ffffff;      /* White for video section background */
-    --color-hover: #555555;         /* Hover color for buttons */
-}
-
-/* Header Styles */
-header {
-    background-color: var(--color-header-footer); /* Black */
-    color: #fff; /* White text */
+    --color-hover: #555555;         /* Hover color */
+    --color-text-dark: #333;        /* General dark text color */
+    --color-light: #fff;            /* General light text color */
+  
+    /* Adjust these for better accessibility contrast if needed. */
+  }
+  
+  /* Body and Default Text */
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+  }
+  
+  /* Skip to Content Link (Accessibility) */
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    transition: top 0.3s;
+    z-index: 1000;
+  }
+  
+  .skip-to-content:focus {
+    top: 0;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--color-header-footer);
+    color: var(--color-light);
     padding: 20px 0;
     text-align: center;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     font-family: 'Yesteryear', cursive;
     font-size: 3em;
     margin-bottom: 10px;
-}
-
-nav ul {
+  }
+  
+  /* Navigation */
+  nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+  }
+  
+  nav ul li a {
+    color: var(--color-light);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: var(--color-accent);
-}
-
-/* Video Section */
-.video-section {
+  }
+  
+  /* Main Content Sections */
+  .video-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: var(--color-video-bg); 
-}
-
-.video-section h2 {
+    background-color: var(--color-video-bg);
+  }
+  
+  .video-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #000000; /* Changed from gold to black */
-}
-
-/* New Wrapper for Image and Video */
-.video-wrapper {
+    color: #000;
+  }
+  
+  .video-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Space between image and video */
-    max-width: 1000px; /* Optional: limit the maximum width */
+    gap: 20px;
+    max-width: 1000px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-/* Profile Photo Styles */
-.profile-photo {
+    flex-wrap: wrap;
+  }
+  
+  /* Profile Photo */
+  .profile-photo {
     width: 100%;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 400px;
     height: auto;
-    border-radius: 10px; /* Optional: add some styling */
-}
-
-/* Adjust Video Container to take available space */
-.video-container {
+    border-radius: 10px;
+  }
+  
+  /* Video Container */
+  .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     width: 100%;
     max-width: 800px;
-}
-
-.video-wrapper .video-container {
-    flex: 1; /* Allow the video to grow and fill space */
-}
-
-/* Ensure iframe fills the container */
-.video-wrapper .video-container iframe {
+    flex: 1;
+  }
+  
+  .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* Set order for desktop: video first, image second */
-.video-container {
-    order: 1;
-}
-
-.profile-photo {
-    order: 2;
-}
-
-/* Donation Section */
-.donation-section {
+  }
+  
+  /* Donation Section */
+  .donation-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: var(--color-donation); /* Black background */
-    color: #fff; /* White text for contrast */
-}
-
-.donation-section h2 {
+    background-color: var(--color-donation);
+    color: var(--color-light);
+  }
+  
+  .donation-section h2 {
     font-size: 2em;
     margin-bottom: 10px;
-}
-
-.donation-section p {
+  }
+  
+  .donation-section p {
     margin-bottom: 20px;
     font-size: 1.1em;
-}
-
-.donation-buttons {
+  }
+  
+  .donation-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-}
-
-.btn {
+  }
+  
+  .btn {
     padding: 10px 20px;
     border: none;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-light);
     font-weight: 700;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
-
-/* Donation Buttons Colors */
-.patreon { background-color: #FF424D; }
-.patreon:hover { background-color: var(--color-hover); }
-
-.paypal { background-color: #003087; }
-.paypal:hover { background-color: var(--color-hover); }
-
-.cashapp { background-color: #25D366; }
-.cashapp:hover { background-color: var(--color-hover); }
-
-.venmo { background-color: #3d95ce; }
-.venmo:hover { background-color: var(--color-hover); }
-
-
-/* Cameo Section */
-.cameo-section {
+    cursor: pointer;
+  }
+  
+  .patreon {
+    background-color: #ff424d; /* Patreon color */
+  }
+  
+  .paypal {
+    background-color: #003087; /* PayPal color */
+  }
+  
+  .cashapp {
+    background-color: #25d366; /* Cash App color */
+  }
+  
+  .venmo {
+    background-color: #3d95ce; /* Venmo color */
+  }
+  
+  .btn:hover {
+    background-color: var(--color-hover);
+  }
+  
+  /* Cameo Section */
+  .cameo-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff; /* White background */
-}
-
-.cameo-section h2 {
+    background-color: #fff;
+    color: var(--color-text-dark);
+  }
+  
+  .cameo-section h2 {
     font-size: 2em;
     margin-bottom: 10px;
-    color: var(--color-accent); /* Gold-like accent color */
-}
-
-.cameo-section p {
+    color: var(--color-accent);
+  }
+  
+  .cameo-section p {
     margin-bottom: 20px;
     font-size: 1.1em;
-}
-
-.cameo-section .btn {
-    background-color: var(--color-accent); /* Gold-like color */
-}
-
-.cameo-section .btn:hover {
+  }
+  
+  .cameo-btn {
+    background-color: var(--color-accent);
+  }
+  
+  .cameo-btn:hover {
     background-color: var(--color-hover);
-}
-
-/* Footer Styles */
-footer {
-    background-color: var(--color-header-footer); /* Black */
-    color: #fff;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-header-footer);
+    color: var(--color-light);
     text-align: center;
     padding: 15px 0;
     font-size: 0.9em;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     nav ul li {
-        margin: 10px 0;
+      margin: 10px 0;
     }
-
-    .don
+  
+    .video-wrapper {
+      flex-direction: column;
+    }
+  }
+  

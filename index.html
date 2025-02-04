@@ -1,65 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotic Comic</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yesteryear&display=swap" rel="stylesheet">
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Robotic Comic - Combining technology, comedy and entertainment.">
-    <meta name="keywords" content="Robotic Comic, Comedy, Robotics, Animations, YouTube, Donations">
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robotic Comic — Technology Meets Comedy</title>
+  <meta name="description" content="Robotic Comic combines technology, humor, and entertainment in a series of fun videos and posts." />
+  <meta name="keywords" content="Robotic Comic, Comedy, Robotics, Animations, YouTube, Donations" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJPQ42QGRW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Robotic Comic — Technology Meets Comedy" />
+  <meta property="og:description" content="Robotic Comic combines technology, humor, and entertainment in a series of fun videos and posts." />
+  <meta property="og:image" content="path_to_optimized_feature_image.jpg" />
+  <meta property="og:url" content="https://www.roboticcomic.com" />
+  <meta property="og:type" content="website" />
 
-      gtag('config', 'G-ZJPQ42QGRW');
-    </script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Robotic Comic — Technology Meets Comedy" />
+  <meta name="twitter:description" content="Robotic Comic combines technology, humor, and entertainment in a series of fun videos and posts." />
+  <meta name="twitter:image" content="path_to_optimized_feature_image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Preconnects & Preloads for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+  <!-- Google Fonts (Montserrat & Yesteryear) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yesteryear&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+
+  <!-- Main CSS (Deferred or in <head> with critical CSS inlined if needed) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) [Use defer to avoid render-blocking] -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZJPQ42QGRW"></script>
+  <script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZJPQ42QGRW');
+  </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <!-- Optional Logo -->
-        <!-- <img src="path_to_logo.png" alt="Robotic Comic Logo" class="logo"> -->
-        <h1>Robotic Comic</h1>
-        <nav>
-            <ul>
-                <li><a href="https://www.youtube.com/@roboticcomic" target="_blank">YouTube</a></li>
-                <li><a href="https://www.facebook.com/RoboticComic" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/roboticcomic/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.tiktok.com/@roboticcomic" target="_blank">TikTok</a></li>
-                <li><a href="https://www.reddit.com/user/TheRoboticComic/" target="_blank">Reddit</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Skip to Main Content Link (Accessibility) -->
+  <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
+  <!-- Header Section -->
+  <header>
+    <h1>Robotic Comic</h1>
+    <nav>
+      <ul>
+        <li><a href="https://www.youtube.com/@roboticcomic" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.facebook.com/RoboticComic" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/roboticcomic/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@roboticcomic" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.reddit.com/user/TheRoboticComic/" target="_blank" rel="noopener">Reddit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
     <!-- Embedded YouTube Video Section -->
     <section class="video-section">
-        <h2>Latest Video</h2>
-        <div class="video-wrapper">
-            <img src="RoboticComicProfile1.jpg" alt="Robotic Comic Profile" class="profile-photo">
-            <div class="video-container">
-                <!-- Replace the src URL with your YouTube video link -->
-                <iframe src="https://www.youtube.com/embed/ynDw7_RYpyA?si=nzgpe6pFkpyYXPnX" 
-                        title="Robotic Comic Latest Video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-            </div>
+      <h2>Latest Video</h2>
+      <div class="video-wrapper">
+        <!-- Profile Photo (Use next-gen format like WebP if possible) -->
+        <img
+          src="RoboticComicProfile1.webp"
+          alt="Robotic Comic profile illustration"
+          class="profile-photo"
+          loading="lazy"
+        />
+
+        <!-- Video Container -->
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/ynDw7_RYpyA?si=nzgpe6pFkpyYXPnX"
+            title="Robotic Comic Latest Video"
+            loading="lazy"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
         </div>
+      </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Robotic Comic. All rights reserved.</p>
-    </footer>
+    <!-- Donation Section -->
+    <section class="donation-section" aria-labelledby="donation-heading">
+      <h2 id="donation-heading">Support Robotic Comic</h2>
+      <p>Help us bring more content by supporting on any of these platforms.</p>
+      <div class="donation-buttons">
+        <a class="btn patreon" href="https://www.patreon.com/" target="_blank" rel="noopener">Patreon</a>
+        <a class="btn paypal" href="https://www.paypal.com/" target="_blank" rel="noopener">PayPal</a>
+        <a class="btn cashapp" href="https://cash.app/" target="_blank" rel="noopener">Cash App</a>
+        <a class="btn venmo" href="https://venmo.com/" target="_blank" rel="noopener">Venmo</a>
+      </div>
+    </section>
+
+    <!-- Cameo Section -->
+    <section class="cameo-section" aria-labelledby="cameo-heading">
+      <h2 id="cameo-heading">Book a Cameo</h2>
+      <p>Get a personalized message for you or your friends from Robotic Comic!</p>
+      <a
+        class="btn cameo-btn"
+        href="https://www.cameo.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Book a Cameo
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Robotic Comic. All rights reserved.</p>
+  </footer>
 </body>
 </html>
