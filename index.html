@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robotic Comic — Technology Meets Comedy</title>
+  
+  <!-- Provide a concise meta description for SEO -->
   <meta
     name="description"
     content="Robotic Comic combines technology, humor, and entertainment in a series of fun videos and posts."
@@ -24,7 +26,6 @@
     property="og:description"
     content="Robotic Comic combines technology, humor, and entertainment in a series of fun videos and posts."
   />
-  <!-- Replace below with your actual image or remove if you have no dedicated OG image -->
   <meta property="og:image" content="RoboticComicProfile1.jpg" />
   <meta property="og:url" content="https://www.roboticcomic.com" />
   <meta property="og:type" content="website" />
@@ -39,7 +40,6 @@
     name="twitter:description"
     content="Robotic Comic combines technology, humor, and entertainment in a series of fun videos and posts."
   />
-  <!-- If you want to specify a Twitter card image, use the line below (optional) -->
   <meta name="twitter:image" content="RoboticComicProfile1.jpg" />
 
   <!-- Favicon (Optional) -->
@@ -50,6 +50,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts: Montserrat & Yesteryear -->
+  <!-- Using the media="print" trick to reduce render-blocking -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yesteryear&display=swap"
     rel="stylesheet"
@@ -57,8 +58,8 @@
     onload="this.media='all'"
   />
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Example of versioned CSS to help with caching. You could increment v=2, v=3, etc. when changes are made. -->
+  <link rel="stylesheet" href="styles.css?v=1" />
 
   <!-- Google tag (gtag.js) [Deferred to avoid render-blocking] -->
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZJPQ42QGRW"></script>
@@ -122,23 +123,17 @@
     </nav>
   </header>
 
-  <!-- Main Content Wrapper -->
+  <!-- Main Content -->
   <main id="main-content">
     <!-- Embedded YouTube Video Section -->
     <section class="video-section">
       <h2>Latest Video</h2>
       <div class="video-wrapper">
-        <!-- Profile Photo (use .webp if you have it) -->
-        <img
-          src="RoboticComicProfile1.jpg"
-          alt="Robotic Comic profile illustration"
-          class="profile-photo"
-          loading="lazy"
-        />
-
+        <!-- VIDEO FIRST in HTML so it appears on the left on desktop,
+             and on top on mobile. -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/ynDw7_RYpyA?si=nzgpe6pFkpyYXPnX"
+            src="https://www.youtube.com/embed/ynDw7_RYpyYXPnX"
             title="Robotic Comic Latest Video"
             frameborder="0"
             loading="lazy"
@@ -146,6 +141,14 @@
             allowfullscreen
           ></iframe>
         </div>
+
+        <!-- Profile Photo (Use .webp if available) -->
+        <img
+          src="RoboticComicProfile1.jpg"
+          alt="Robotic Comic profile illustration"
+          class="profile-photo"
+          loading="lazy"
+        />
       </div>
     </section>
 

@@ -1,3 +1,5 @@
+<!-- styles.css (Keep versioned if you want to bust caching whenever changes are made.) -->
+<style>
 /* Global Resets */
 * {
   margin: 0;
@@ -7,10 +9,10 @@
 
 /* CSS Variables */
 :root {
-  --color-header-footer: #000000; /* Black for header and footer */
+  --color-header-footer: #000000; /* Black for header/footer */
   --color-accent: #ae8257;        /* Gold-like accent color */
-  --color-donation: #000000;      /* Black for donation section background */
-  --color-video-bg: #ffffff;      /* White for video section background */
+  --color-donation: #000000;      /* Black background for donation */
+  --color-video-bg: #ffffff;      /* White background for video section */
   --color-hover: #555555;         /* Hover color */
   --color-text-dark: #333333;     /* General text color */
   --color-light: #ffffff;         /* White for text on dark backgrounds */
@@ -90,6 +92,7 @@ nav ul li a:hover {
   color: #000;
 }
 
+/* Video Wrapper: arrange video first, image second */
 .video-wrapper {
   display: flex;
   align-items: center;
@@ -97,15 +100,7 @@ nav ul li a:hover {
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-/* Profile Photo */
-.profile-photo {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
 }
 
 /* Video Container */
@@ -115,7 +110,7 @@ nav ul li a:hover {
   height: 0;
   overflow: hidden;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px; /* limit width if desired */
   flex: 1;
 }
 
@@ -127,10 +122,17 @@ nav ul li a:hover {
   height: 100%;
 }
 
-/* Donation Section (Commented Out) */
+/* Profile Photo */
+.profile-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
 
+/* Donation Section (Commented Out) */
 .donation-section {
-  /* If you uncomment, these styles will apply to the donation section */
+  /* Styles if re-enabled */
   padding: 40px 20px;
   text-align: center;
   background-color: var(--color-donation);
@@ -165,30 +167,26 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+/* Example Button Colors */
 .patreon {
   background-color: #ff424d; /* Patreon color */
 }
-
 .paypal {
   background-color: #003087; /* PayPal color */
 }
-
 .cashapp {
   background-color: #25d366; /* Cash App color */
 }
-
 .venmo {
   background-color: #3d95ce; /* Venmo color */
 }
-
 .btn:hover {
   background-color: var(--color-hover);
 }
 
 /* Cameo Section (Commented Out) */
-
 .cameo-section {
-  /* If you uncomment, these styles will apply to the cameo section */
+  /* Styles if re-enabled */
   padding: 40px 20px;
   text-align: center;
   background-color: #fff;
@@ -223,17 +221,11 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsive Breakpoint */
+/* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
   .video-wrapper {
     flex-direction: column;
+    align-items: center;
   }
 }
+</style>
